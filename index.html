@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Compare Lifeline Phone Providers Before Applying</title>
+  <meta name="description" content="Learn how to compare Lifeline phone providers, check eligibility, understand phone availability, and avoid outdated ACP information before applying.">
+  <link rel="canonical" href="https://lifeline-provider-comparison.pages.dev/">
+  <style>
+    :root {
+      --bg: #f6f4ee;
+      --panel: #ffffff;
+      --panel-soft: #f2f7f6;
+      --text: #1f3139;
+      --muted: #5d6f79;
+      --line: #dce5e8;
+      --brand: #0f766e;
+      --brand-dark: #0f4f4a;
+      --accent: #b46b22;
+      --accent-soft: #fff4df;
+      --danger: #8a3b2c;
+      --shadow: 0 18px 50px rgba(30, 55, 70, .08);
+      --radius: 24px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(15, 118, 110, .10), transparent 34rem),
+        radial-gradient(circle at 90% 10%, rgba(180, 107, 34, .10), transparent 26rem),
+        var(--bg);
+      line-height: 1.65;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: var(--brand-dark); text-underline-offset: 3px; }
+    a:hover { color: var(--accent); }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 1rem;
+      background: #fff;
+      color: var(--text);
+      padding: .7rem 1rem;
+      border-radius: .8rem;
+      z-index: 10;
+    }
+
+    .skip-link:focus { left: 1rem; }
+
+    .site-wrap { overflow: hidden; }
+
+    .container {
+      width: min(100% - 2rem, var(--max));
+      margin-inline: auto;
+    }
+
+    .topbar {
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(220, 229, 232, .75);
+      background: rgba(246, 244, 238, .78);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: .75rem;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 800;
+      letter-spacing: -.02em;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #0f766e, #184e77);
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(15, 118, 110, .22);
+      font-weight: 900;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: .35rem;
+      font-size: .93rem;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: var(--muted);
+      padding: .55rem .8rem;
+      border-radius: 999px;
+    }
+
+    .nav a:hover {
+      background: #fff;
+      color: var(--brand-dark);
+    }
+
+    .hero {
+      padding: clamp(3rem, 7vw, 6.5rem) 0 3rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(340px, .98fr);
+      gap: clamp(2rem, 5vw, 4.5rem);
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      width: fit-content;
+      padding: .45rem .8rem;
+      border: 1px solid rgba(15, 118, 110, .22);
+      border-radius: 999px;
+      color: var(--brand-dark);
+      background: rgba(255, 255, 255, .72);
+      font-weight: 750;
+      font-size: .9rem;
+      margin-bottom: 1rem;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.12;
+      color: var(--text);
+      letter-spacing: -.035em;
+      margin: 0 0 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2.55rem, 5.7vw, 5.15rem);
+      max-width: 11ch;
+    }
+
+    h2 { font-size: clamp(1.8rem, 3vw, 2.65rem); }
+    h3 { font-size: 1.22rem; letter-spacing: -.02em; }
+
+    .hero-copy {
+      font-size: clamp(1.05rem, 1.5vw, 1.24rem);
+      color: var(--muted);
+      max-width: 66ch;
+      margin: 0 0 1.3rem;
+    }
+
+    .hero-note {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .85rem;
+      margin-top: 1.6rem;
+    }
+
+    .note-card {
+      background: rgba(255, 255, 255, .78);
+      border: 1px solid rgba(220, 229, 232, .9);
+      border-radius: 18px;
+      padding: 1rem;
+      box-shadow: 0 12px 28px rgba(31, 49, 57, .05);
+    }
+
+    .note-card strong {
+      display: block;
+      color: var(--brand-dark);
+      font-size: 1rem;
+      margin-bottom: .2rem;
+    }
+
+    .note-card span {
+      display: block;
+      color: var(--muted);
+      font-size: .92rem;
+      line-height: 1.45;
+    }
+
+    .hero-media {
+      position: relative;
+    }
+
+    .hero-media img {
+      border-radius: 32px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255, 255, 255, .85);
+    }
+
+    .floating-card {
+      position: absolute;
+      right: -1rem;
+      bottom: -1rem;
+      width: min(280px, 70%);
+      background: rgba(255, 255, 255, .92);
+      border: 1px solid rgba(220, 229, 232, .9);
+      border-radius: 22px;
+      padding: 1rem;
+      box-shadow: 0 18px 42px rgba(31, 49, 57, .12);
+    }
+
+    .floating-card strong {
+      display: block;
+      color: var(--accent);
+      margin-bottom: .25rem;
+    }
+
+    .floating-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .95rem;
+      line-height: 1.45;
+    }
+
+    .section {
+      padding: clamp(2.6rem, 6vw, 5rem) 0;
+    }
+
+    .section-head {
+      max-width: 820px;
+      margin-bottom: 1.8rem;
+    }
+
+    .section-head p,
+    .content-card p,
+    .text-block p {
+      color: var(--muted);
+      margin: 0 0 1rem;
+    }
+
+    .panel {
+      background: rgba(255, 255, 255, .86);
+      border: 1px solid rgba(220, 229, 232, .9);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .content-card {
+      padding: clamp(1.35rem, 3vw, 2.25rem);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      align-items: stretch;
+    }
+
+    .three-col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.1rem;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 1.25rem;
+      box-shadow: 0 12px 28px rgba(31, 49, 57, .05);
+    }
+
+    .card p { margin: 0; color: var(--muted); }
+
+    .number {
+      width: 38px;
+      height: 38px;
+      border-radius: 14px;
+      background: var(--panel-soft);
+      color: var(--brand-dark);
+      display: grid;
+      place-items: center;
+      font-weight: 850;
+      margin-bottom: .85rem;
+    }
+
+    .status-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .status {
+      border-radius: 22px;
+      padding: 1.25rem;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .status.good { background: #f0fdfa; }
+    .status.warn { background: #fff7ed; }
+
+    .status-label {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      padding: .35rem .65rem;
+      border-radius: 999px;
+      font-size: .85rem;
+      font-weight: 800;
+      margin-bottom: .85rem;
+    }
+
+    .good .status-label { color: #0f766e; background: rgba(15, 118, 110, .10); }
+    .warn .status-label { color: #9a5a16; background: rgba(180, 107, 34, .12); }
+
+    ul, ol {
+      padding-left: 1.2rem;
+      margin: .6rem 0 0;
+    }
+
+    li { margin: .5rem 0; color: var(--muted); }
+    li strong { color: var(--text); }
+
+    .check-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: .9rem;
+      margin-top: 1.2rem;
+    }
+
+    .check-item {
+      display: flex;
+      gap: .75rem;
+      align-items: flex-start;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 1rem;
+    }
+
+    .tick {
+      flex: 0 0 auto;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--brand);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: .82rem;
+      font-weight: 900;
+      margin-top: .1rem;
+    }
+
+    .check-item span { color: var(--muted); }
+
+    .image-split {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 1.25rem;
+      align-items: center;
+    }
+
+    .image-split img {
+      border-radius: 24px;
+      border: 1px solid rgba(220, 229, 232, .9);
+      box-shadow: 0 16px 38px rgba(31, 49, 57, .08);
+    }
+
+    .source-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.4rem;
+    }
+
+    .source-link {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 1rem;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .source-link strong { display: block; color: var(--brand-dark); margin-bottom: .2rem; }
+    .source-link span { color: var(--muted); font-size: .94rem; }
+
+    .link-panel {
+      background: linear-gradient(135deg, #ffffff, #eef8f6);
+      border: 1px solid rgba(15, 118, 110, .18);
+      border-radius: 26px;
+      padding: clamp(1.4rem, 3vw, 2.35rem);
+      box-shadow: var(--shadow);
+    }
+
+    .warning-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: .85rem;
+      margin-top: 1rem;
+    }
+
+    .warning-item {
+      background: #fff;
+      border: 1px solid #edd8ca;
+      border-radius: 18px;
+      padding: 1rem;
+      color: var(--muted);
+    }
+
+    .warning-item strong { color: var(--danger); display: block; margin-bottom: .25rem; }
+
+    .eeat-strip {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .mini {
+      padding: 1rem;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.85);
+    }
+
+    .mini strong { display: block; margin-bottom: .35rem; }
+    .mini p { margin: 0; color: var(--muted); font-size: .95rem; }
+
+    .bottom-link {
+      border-top: 1px solid var(--line);
+      margin-top: 1.5rem;
+      padding-top: 1.2rem;
+      color: var(--muted);
+      font-size: .98rem;
+    }
+
+    .footer {
+      padding: 2.5rem 0 3rem;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      border-top: 1px solid var(--line);
+      padding-top: 1.5rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .two-col,
+      .image-split,
+      .status-grid,
+      .source-box,
+      .eeat-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-note,
+      .three-col {
+        grid-template-columns: 1fr;
+      }
+
+      h1 { max-width: 100%; }
+      .nav { display: none; }
+      .floating-card { right: .75rem; bottom: .75rem; }
+    }
+
+    @media (max-width: 640px) {
+      .container { width: min(100% - 1.15rem, var(--max)); }
+      .hero { padding-top: 2.35rem; }
+      .check-grid,
+      .warning-list { grid-template-columns: 1fr; }
+      .topbar { position: static; }
+      .brand span:last-child { font-size: .94rem; }
+      .content-card, .card, .link-panel { border-radius: 20px; }
+      .footer-inner { flex-direction: column; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Compare Lifeline Phone Providers Before Applying",
+    "description": "Learn how to compare Lifeline phone providers, check eligibility, understand phone availability, and avoid outdated ACP information before applying.",
+    "datePublished": "2026-04-24",
+    "dateModified": "2026-04-24",
+    "image": "https://lifeline-provider-comparison.pages.dev/assets/lifeline-provider-comparison-hero.webp",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://lifeline-provider-comparison.pages.dev/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-wrap">
+    <header class="topbar" aria-label="Site header">
+      <div class="container topbar-inner">
+        <a class="brand" href="./" aria-label="Provider comparison home">
+          <span class="brand-mark">L</span>
+          <span>Lifeline Provider Help</span>
+        </a>
+        <nav class="nav" aria-label="Page sections">
+          <a href="#why">Why compare</a>
+          <a href="#lifeline-acp">Lifeline vs ACP</a>
+          <a href="#checks">What to check</a>
+          <a href="#documents">Documents</a>
+          <a href="#warnings">Warnings</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <div class="eyebrow">Independent consumer information page</div>
+            <h1>How to Compare Lifeline Phone Providers Before Applying</h1>
+            <p class="hero-copy">Lifeline remains active for eligible low-income consumers, but the Affordable Connectivity Program ended in June 2024. That difference matters because older pages, old ads, and saved social media posts can still make it look like ACP benefits are available when they are not.</p>
+            <p class="hero-copy">Before you choose a company, compare the provider’s state availability, network coverage, monthly service rules, phone stock, document requirements, and activation steps. A careful comparison helps you avoid outdated ACP information, unrealistic iPhone promises, and applications that don’t match your state or eligibility situation.</p>
+            <div class="hero-note" aria-label="Important facts">
+              <div class="note-card">
+                <strong>Lifeline is active</strong>
+                <span>Eligible households may still qualify under current Lifeline rules.</span>
+              </div>
+              <div class="note-card">
+                <strong>ACP has ended</strong>
+                <span>ACP stopped after June 2024, so current offers should not rely on it.</span>
+              </div>
+              <div class="note-card">
+                <strong>No iPhone guarantee</strong>
+                <span>iPhone availability depends on stock, ZIP code, eligibility, and plan rules.</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-media" aria-label="Provider comparison illustration">
+            <img src="assets/lifeline-provider-comparison-hero.webp" width="1200" height="780" alt="Illustration of a Lifeline provider comparison checklist with phone availability and coverage notes" fetchpriority="high">
+            <div class="floating-card">
+              <strong>Compare before you apply</strong>
+              <p>Provider rules can change by state, plan, device stock, and verification result.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="why">
+        <div class="container">
+          <div class="section-head">
+            <h2>Why provider comparison matters</h2>
+            <p>Two Lifeline providers can look similar on the surface, but the real experience may be different once you enter your ZIP code and start the application. Coverage, phone options, data limits, support quality, and shipping rules are not the same everywhere.</p>
+          </div>
+          <div class="three-col">
+            <article class="card">
+              <div class="number">1</div>
+              <h3>Coverage is local</h3>
+              <p>A provider may operate in your state, but that does not always mean the network is strong at your home, workplace, school, or regular travel route. Rural addresses and apartment buildings can have different results than nearby areas.</p>
+            </article>
+            <article class="card">
+              <div class="number">2</div>
+              <h3>Phone stock changes</h3>
+              <p>Some providers advertise phone choices, but the exact model may depend on inventory at the time of approval. Refurbished phones, Android phones, and limited iPhone options may appear at different times.</p>
+            </article>
+            <article class="card">
+              <div class="number">3</div>
+              <h3>Plan rules are not identical</h3>
+              <p>Talk, text, data, hotspot use, renewal rules, and upgrade options can vary. A plan that works for light use may not be enough for someone who depends on mobile data every day.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="lifeline-acp">
+        <div class="container two-col">
+          <div class="panel content-card">
+            <h2>Lifeline is active, ACP has ended</h2>
+            <p>Lifeline is the ongoing federal program that helps eligible low-income consumers reduce the cost of phone service, internet service, or bundled service. It is not the same as ACP.</p>
+            <p>The Affordable Connectivity Program, often called ACP, ended in June 2024. That means users should be careful with old articles, outdated provider pages, and social posts that still talk about ACP discounts as if they are available today.</p>
+            <p>The safest approach is simple: treat Lifeline as the current program, then check the current rules and provider terms before you submit personal information.</p>
+            <div class="source-box" aria-label="Official reference links">
+              <a class="source-link" href="https://www.fcc.gov/lifeline-consumers">
+                <strong>FCC Lifeline consumer page</strong>
+                <span>Official FCC consumer information about Lifeline.</span>
+              </a>
+              <a class="source-link" href="https://www.lifelinesupport.org/">
+                <strong>LifelineSupport.org</strong>
+                <span>Official application, eligibility, and support resource.</span>
+              </a>
+            </div>
+          </div>
+          <div class="panel content-card">
+            <div class="status-grid">
+              <div class="status good">
+                <span class="status-label">Current program</span>
+                <h3>Lifeline</h3>
+                <p>Still active for eligible households. Users can qualify through income or participation in certain government assistance programs, subject to current Lifeline rules.</p>
+              </div>
+              <div class="status warn">
+                <span class="status-label">Ended program</span>
+                <h3>ACP</h3>
+                <p>Ended in June 2024. Any current provider comparison should avoid treating ACP as an active benefit or using ACP device language as if it still applies.</p>
+              </div>
+            </div>
+            <p style="margin-top: 1.25rem;">This page is written for consumer understanding only. It is not a government website, it does not process applications, and it does not decide eligibility. Provider terms, device availability, and approval requirements can change, so users should verify details before applying.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="checks">
+        <div class="container">
+          <div class="section-head">
+            <h2>What to check before choosing a provider</h2>
+            <p>A Lifeline provider comparison should be practical. Focus on the details that affect whether the service will work for your household after approval, not only the headline phone offer.</p>
+          </div>
+          <div class="panel content-card">
+            <div class="check-grid">
+              <div class="check-item">
+                <span class="tick">✓</span>
+                <span><strong>State availability:</strong> Confirm that the provider accepts Lifeline applications in your state and serves your ZIP code.</span>
+              </div>
+              <div class="check-item">
+                <span class="tick">✓</span>
+                <span><strong>Network coverage:</strong> Check whether the network is reliable where you actually use your phone, not only in nearby cities.</span>
+              </div>
+              <div class="check-item">
+                <span class="tick">✓</span>
+                <span><strong>Phone model availability:</strong> Review whether the provider lists Android phones, refurbished phones, or specific upgrade options.</span>
+              </div>
+              <div class="check-item">
+                <span class="tick">✓</span>
+                <span><strong>iPhone stock:</strong> Do not assume an iPhone is available. Stock can depend on provider inventory, location, eligibility, and plan rules.</span>
+              </div>
+              <div class="check-item">
+                <span class="tick">✓</span>
+                <span><strong>Data, talk, and text limits:</strong> Compare monthly data amounts, throttling rules, hotspot access, talk minutes, and texting rules.</span>
+              </div>
+              <div class="check-item">
+                <span class="tick">✓</span>
+                <span><strong>Document requirements:</strong> Check what proof may be needed for identity, address, income, or program participation.</span>
+              </div>
+              <div class="check-item">
+                <span class="tick">✓</span>
+                <span><strong>Shipping process:</strong> Look for clear information about shipping, delivery timing, device condition, and what happens after approval.</span>
+              </div>
+              <div class="check-item">
+                <span class="tick">✓</span>
+                <span><strong>Activation support:</strong> Make sure the provider explains SIM activation, number transfer, replacement rules, and customer support options.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="compare">
+        <div class="container">
+          <div class="link-panel">
+            <h2>Where to compare providers</h2>
+            <p>Before applying, it helps to review a provider directory that explains coverage, phone availability, and application steps. You can compare <a href="https://freeiphone.click/providers" rel="dofollow">Lifeline phone providers</a> to see which options may fit your state and eligibility situation.</p>
+            <p>A directory should be used as a starting point, not as a final promise. After narrowing down the options, check the provider’s own current terms, confirm whether your ZIP code is served, and make sure the phone offer still matches what you expect.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="documents">
+        <div class="container image-split">
+          <div>
+            <img src="assets/lifeline-documents-needed.webp" width="980" height="640" loading="lazy" alt="Illustration of documents needed for a Lifeline application, including ID, address proof, and program proof">
+          </div>
+          <div class="panel content-card">
+            <h2>Documents people usually need</h2>
+            <p>Many applications are delayed because the uploaded documents do not clearly match the applicant’s name, address, or eligibility information. Preparing documents before applying can reduce mistakes.</p>
+            <ul>
+              <li><strong>Identity proof:</strong> A government-issued ID, driver’s license, passport, or another acceptable document that confirms who you are.</li>
+              <li><strong>Proof of address:</strong> A lease, utility bill, official mail, or another document showing your current residential address.</li>
+              <li><strong>Income proof:</strong> Pay stubs, benefit statements, tax documents, or other accepted proof if applying through income eligibility.</li>
+              <li><strong>Program participation proof:</strong> A current document showing participation in a qualifying program, such as SNAP, Medicaid, SSI, FPHA, Veterans Pension, or another accepted program under current Lifeline rules.</li>
+            </ul>
+            <p>Names, dates, and addresses should be readable. If the application system asks for another document, follow the instructions from the official Lifeline process or the selected provider.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>How this page keeps the information responsible</h2>
+            <p>Provider comparison pages can easily become misleading when they focus only on phone names or old ACP language. This page uses a more careful standard so the reader understands what can change before applying.</p>
+          </div>
+          <div class="eeat-strip">
+            <div class="mini">
+              <strong>Current program separation</strong>
+              <p>Lifeline and ACP are explained separately so an ended ACP benefit is not confused with the active Lifeline program.</p>
+            </div>
+            <div class="mini">
+              <strong>No device guarantee</strong>
+              <p>iPhone availability is treated as conditional because stock, location, eligibility, and provider rules can change.</p>
+            </div>
+            <div class="mini">
+              <strong>Official references included</strong>
+              <p>Readers are pointed to FCC and LifelineSupport.org resources for current consumer information and eligibility checks.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="warnings">
+        <div class="container image-split">
+          <div class="panel content-card">
+            <h2>Warning signs to avoid</h2>
+            <p>A real Lifeline application should not feel like a high-pressure sales trick. Be careful when a site uses fake urgency, promises a specific premium phone for everyone, or asks for payment details before explaining the service clearly.</p>
+            <div class="warning-list">
+              <div class="warning-item">
+                <strong>Upfront payment requests</strong>
+                Watch out for unclear fees, surprise deposits, or payment requests that are not explained in the provider’s official terms.
+              </div>
+              <div class="warning-item">
+                <strong>Guaranteed iPhone claims</strong>
+                A provider may offer iPhones at times, but no comparison page should guarantee every applicant will receive one.
+              </div>
+              <div class="warning-item">
+                <strong>Bank or credit card details</strong>
+                Be cautious if a site asks for sensitive financial details before giving clear program and provider information.
+              </div>
+              <div class="warning-item">
+                <strong>Fake government-looking websites</strong>
+                Official-looking colors, badges, or names do not prove government affiliation. Check the URL and read the page carefully.
+              </div>
+              <div class="warning-item">
+                <strong>Pressure to apply immediately</strong>
+                Fake countdowns and urgent language can push people into mistakes. Real eligibility checks should allow time to review documents.
+              </div>
+              <div class="warning-item">
+                <strong>ACP wording used as current</strong>
+                If a page still talks as if ACP is active, verify everything before trusting its phone or discount claims.
+              </div>
+            </div>
+          </div>
+          <div>
+            <img src="assets/lifeline-scam-warning.webp" width="980" height="640" loading="lazy" alt="Illustration warning users to avoid fake guarantees and pressure tactics before applying for Lifeline service">
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="final-checklist">
+        <div class="container">
+          <div class="panel content-card">
+            <h2>Final checklist before applying</h2>
+            <p>Use this checklist before entering personal information or uploading documents. It helps separate real provider comparison from outdated ACP claims and unrealistic phone promises.</p>
+            <ol>
+              <li>Confirm that the provider serves your state and ZIP code.</li>
+              <li>Check network coverage where you live, work, and travel most often.</li>
+              <li>Read the current plan limits for data, talk, text, hotspot use, and renewals.</li>
+              <li>Verify whether any iPhone offer is currently available, conditional, refurbished, discounted, or subject to stock.</li>
+              <li>Make sure the page is not presenting ACP as active after June 2024.</li>
+              <li>Prepare identity, address, income, or program participation documents before applying.</li>
+              <li>Review shipping, activation, replacement, and customer support rules.</li>
+              <li>Leave the page if it uses pressure tactics, fake government signals, or guaranteed premium phone claims.</li>
+            </ol>
+            <div class="bottom-link">
+              For broader consumer information on free iPhone topics, visit the <a href="https://freeiphone.click/" rel="dofollow">Free iPhone consumer guide homepage</a>.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <span>Independent informational page for Lifeline provider comparison.</span>
+        <span>Updated April 24, 2026.</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
